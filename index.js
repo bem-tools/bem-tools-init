@@ -7,13 +7,13 @@ module.exports = function(root) {
     root || (root = process.cwd());
 
     var absRootPath = path.resolve(root),
-        absConfPath = path.join(absRootPath, bemConf.getConfigFile();
+        absConfPath = path.join(absRootPath, bemConf.getConfigFile());
 
-    if (!fs.existsSync(absConfPath)) return;
+    if (fs.existsSync(absConfPath)) return;
 
     mkdirp(absRootPath);
 
-    fs.writeFileSync(absConfPath), [
+    fs.writeFileSync(absConfPath, [
         '{',
         '   "root": true',
         '}',
