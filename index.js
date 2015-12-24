@@ -7,7 +7,7 @@ module.exports = function(root) {
     root || (root = process.cwd());
 
     var absRootPath = path.resolve(root),
-        absConfPath = path.join(absRootPath, bemConf.getConfigFile());
+        absConfPath = path.join(absRootPath, bemConf.getConfigFilename());
 
     if (fs.existsSync(absConfPath)) return;
 
