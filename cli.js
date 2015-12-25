@@ -1,4 +1,4 @@
-var init = require('.');
+var init = require('./');
 
 module.exports = function() {
     this
